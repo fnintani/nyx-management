@@ -1,0 +1,131 @@
+:root {
+    --primary-green:rgb(12, 61, 42);
+    --primary-grey: rgb(239, 240, 234);
+    --secondary-grey:  rgb(170, 173, 154);
+    --primary-gold: rgb(222, 208, 155);
+    --transition: all 0.3s linear;
+}
+html {
+    scroll-behavior: smooth;
+  }
+*,
+::after,
+::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    background: var(--primary-grey);
+    color: var(--primary-green);
+    line-height: 1.5;
+    font-size: 0.875rem;
+}
+ul {
+    list-style-type: none;
+}
+a {
+    text-decoration: none;
+}
+img {
+    display: block;
+}
+
+/* navbar */
+nav {
+    background-color: var(--primary-grey);
+    padding: 1rem 1.5rem;
+}
+.nav-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.nav-toggle {
+    font-size: 1.5rem;
+    color: var(--primary-gold);
+    background: transparent;
+    border-color: transparent;
+    transition: var(--transition);
+}
+.nav-toggle:hover {
+    cursor: pointer;
+    color: var(--secondary-grey);
+}
+.logo {
+    height: 70px;
+}
+.links-container {
+    height: 0;
+    overflow: hidden;
+    transition: var(--transition);
+}
+.show-links {
+    height: 200px;
+}
+.links a {
+    background: white;
+    color: var(--primary-green);
+    font-size: 1.1rem;
+    text-transform: capitalize;
+    letter-spacing: 0.25rem;
+    display: block;
+    transition: var(--transition);
+    font-weight: bold;
+    padding: 0.75rem 0;
+}
+.links a:hover {
+    color: white;
+}
+
+@media screen and (min-width: 800px) {
+    nav {
+        background: transparent;
+    }
+    .nav-center {
+        width: 90vw;
+        max-width: 1170px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .nav-header {
+        padding: 0;
+    }
+    .logo {
+        height: 90px;
+    }
+    .nav-toggle {
+        display: none;
+    }
+    .links-container {
+        height: auto !important;
+    }
+    .links {
+        display: flex;
+    }
+    .links a {
+        background: transparent;
+        color: var(--primary-green);
+        font-size: 1.1rem;
+        text-transform: capitalize;
+        letter-spacing: 0.25rem;
+        display: block;
+        transition: var(--transition);
+        margin: 0 1rem;
+        font-weight: bold;
+        padding: 0;
+    }
+    .links a:hover {
+        color: var(--primary-gold);
+    }
+}
+/* hero */
+header {
+    min-height: 100vh;
+    background: linear-gradient(rgba(255, 255, 255, 0.952), rgb(5, 27, 19)),
+      url(./images/hero.jpg) center/cover no-repeat;
+}
