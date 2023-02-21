@@ -1,8 +1,10 @@
 :root {
     --primary-green:rgb(12, 61, 42);
     --primary-grey: rgb(239, 240, 234);
-    --secondary-grey:  rgb(170, 173, 154);
+    --secondary-grey: rgb(170, 173, 154);
     --primary-gold: rgb(222, 208, 155);
+    --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
     --transition: all 0.3s;
 }
 html {
@@ -34,6 +36,23 @@ img {
 }
 
 /* navbar */
+
+/* fixed navbar */
+.fixed-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: white;
+    box-shadow: var(--light-shadow);
+}
+.fixed-nav .links a {
+    color: var(--primary-green);
+}
+.fixed-nav .links a:hover {
+    color: var(--primary-gold);
+}
+
 nav {
     background-color: var(--primary-grey);
     padding: 1rem 1.5rem;
@@ -177,3 +196,33 @@ header {
         max-width: 40rem;
     }
 }
+
+/* sections and title */
+.title h2 {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 2rem;
+}
+.title span {
+    color: var(--primary-green);
+}
+#about,
+#talents,
+#contact {
+    height: 80vh;
+}
+#services {
+    background: white;
+}
+footer {
+     background: var(--secondary-grey);
+    padding: 5rem 1rem;
+}
+footer p {
+    color: white;
+    text-align: center;
+    text-transform: capitalize;
+    letter-spacing: 0.25rem;
+    margin-bottom: 0;
+}
+
